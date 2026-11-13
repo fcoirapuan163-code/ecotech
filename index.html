@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#092d3b">
+<title>EcoTech | Ciência para um futuro sustentável</title>
+<style>
+:root{--navy:#082f3a;--deep:#061f29;--teal:#087e78;--mint:#b8efd0;--lime:#d7f36b;--bg:#f2f7f4;--ink:#17363a;--muted:#647b7c;--line:#dce8e2;--white:#fff;--shadow:0 8px 24px #123c3010}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{background:radial-gradient(circle at 85% 5%,#1d7770 0,transparent 34%),linear-gradient(135deg,var(--deep),var(--navy));color:#fff;padding:22px 18px 25px}
+.wrap{max-width:980px;margin:auto}.brand{display:flex;align-items:center;gap:11px}.logo{width:46px;height:46px;border-radius:15px;background:#174e52;display:grid;place-items:center;font-size:26px;border:1px solid #4a8c7d}
+h1{font-size:22px;letter-spacing:1.8px;margin:0}.brand small{color:#b9d8d0;letter-spacing:1.2px;font-size:10px}.hero{padding:26px 0 4px;display:grid;grid-template-columns:1fr;gap:12px}.hero h2{font-size:clamp(28px,6vw,42px);line-height:1.06;margin:0;max-width:650px}.hero p{color:#d4e8e2;margin:0;max-width:630px}.hero .pill{display:inline-block;background:#174e52;color:#d6f6df;border:1px solid #367c70;padding:5px 10px;border-radius:30px;font-size:11px;font-weight:800;letter-spacing:.8px;width:max-content}
+main{max-width:980px;margin:auto;padding:14px 14px 40px}
+nav{display:flex;overflow:auto;gap:7px;padding:5px 0 13px;position:sticky;top:0;background:var(--bg);z-index:5}
+nav button{white-space:nowrap;border:1px solid var(--line);background:white;color:var(--ink);padding:10px 13px;border-radius:12px;font-weight:750;font-size:13px}
+nav button.active{background:var(--navy);color:white;border-color:var(--navy)}
+.panel{display:none}.panel.active{display:block}
+h2.section{font-size:23px;margin:10px 0 3px}.intro{color:var(--muted);margin:0 0 15px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.card,.box{background:white;border:1px solid var(--line);border-radius:17px;padding:15px;box-shadow:var(--shadow)}
+.card .emoji{font-size:25px}.card b{display:block;margin:4px 0}.card small,.muted{color:var(--muted)}
+.card button{margin-top:10px}.content{background:white;border:1px solid var(--line);border-radius:17px;padding:16px;margin:11px 0;box-shadow:var(--shadow)}
+.content h3{margin:0 0 7px;font-size:18px}.content p{margin:7px 0}.tag{display:inline-block;background:#e5f4eb;color:#17624e;padding:4px 9px;border-radius:30px;font-size:11px;font-weight:800;letter-spacing:.4px}
+button{font:inherit;cursor:pointer}.primary,.secondary{border:0;border-radius:12px;padding:12px 15px;font-weight:800}.primary{background:var(--teal);color:white}.secondary{background:#e8f2ed;color:#17564d}.wide{width:100%;margin-top:10px}
+.formula{background:#edf5f1;padding:14px;border-radius:13px;text-align:center;font-size:21px;font-weight:850;color:#15594f;margin:12px 0}
+label{display:block;font-weight:700;margin:12px 0 5px}input[type=range]{width:100%;accent-color:var(--teal)}input[type=text],textarea,select{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;background:#fff;color:var(--ink)}
+.value{font-size:26px;font-weight:900;color:var(--teal)}.stat{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.stat:last-child{border:0}
+.chat{background:#eef5f1;border-radius:16px;padding:12px;min-height:190px;max-height:370px;overflow:auto}.bubble{max-width:90%;padding:11px 13px;border-radius:14px;margin:8px 0;white-space:pre-wrap}.bot{background:white;border:1px solid var(--line);border-top-left-radius:4px}.user{background:#d9f2e3;margin-left:auto;border-top-right-radius:4px}.chatrow{display:flex;gap:8px;margin-top:9px}.chatrow input{min-width:0;flex:1}.chatrow button{flex:0 0 auto}
+.option{display:flex;align-items:flex-start;gap:9px;border:1px solid var(--line);padding:11px;border-radius:12px;margin:8px 0;background:#fff}.option input{margin-top:5px;accent-color:var(--teal)}
+.feedback{background:#edf5f1;padding:12px;border-radius:12px;margin-top:12px}
+.progress{height:8px;border-radius:20px;background:#e4eee8;overflow:hidden}.progress span{display:block;height:100%;background:var(--teal);width:0}
+details{background:white;border:1px solid var(--line);border-radius:13px;padding:12px 14px;margin:8px 0}summary{font-weight:800;cursor:pointer}
+footer{background:var(--navy);color:white;text-align:center;padding:24px;border-radius:20px;margin-top:22px}footer small{color:#c6e1d8}
+@media(min-width:650px){header{padding:26px max(22px,calc((100% - 940px)/2)) 30px}.hero{grid-template-columns:1fr auto;align-items:end}.hero p{font-size:16px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}main{padding-left:20px;padding-right:20px}}
+</style></head>
+<body>
+<header><div class="wrap">
+ <div class="brand"><div class="logo">🌱</div><div><h1>ECOTECH</h1><small class="creators">Criadoras: Klarissa Gadelha e Ana Lúcia Carvalho</small><small>CIÊNCIA • TECNOLOGIA • SUSTENTABILIDADE</small></div></div>
+ <div class="hero"><div><span class="pill">EXPLORAR O FUTURO</span><h2>O futuro está em nossas mãos.</h2><p>Entenda a Física por trás dos aparelhos, da robótica e da energia — e descubra como inovar sem esquecer do planeta.</p></div><div style="font-size:68px;text-align:center">⚡🤖🌎</div></div>
+</div></header>
+<main>
+<nav>
+<button class="active" data-tab="home">⌂ Início</button><button data-tab="fisica">⚡ Física</button><button data-tab="lab">🧪 Laboratório</button><button data-tab="lixo">♻️ E-lixo</button><button data-tab="futuro">🤖 Futuro</button><button data-tab="quiz">🎯 Desafio</button><button data-tab="ia">✦ EcoIA</button>
+</nav>
+<section id="home" class="panel active">
+ <h2 class="section">Bem-vindo ao EcoTech</h2><p class="intro">Um espaço para investigar, testar e aprender. Escolha uma área para começar.</p>
+ <div class="grid">
+  <div class="card"><div class="emoji">⚡</div><b>Física no cotidiano</b><small>Eletricidade, potência, energia e circuitos.</small><button class="secondary" onclick="go('fisica')">Explorar →</button></div>
+  <div class="card"><div class="emoji">🧪</div><b>Laboratório virtual</b><small>Faça cálculos e teste o consumo de aparelhos.</small><button class="secondary" onclick="go('lab')">Experimentar →</button></div>
+  <div class="card"><div class="emoji">♻️</div><b>Lixo eletrônico</b><small>Impactos, descarte e reciclagem responsável.</small><button class="secondary" onclick="go('lixo')">Investigar →</button></div>
+  <div class="card"><div class="emoji">🤖</div><b>Profissões do futuro</b><small>Como robótica e automação transformam o trabalho.</small><button class="secondary" onclick="go('futuro')">Descobrir →</button></div>
+  <div class="card"><div class="emoji">🎯</div><b>Quiz de conhecimentos</b><small>Teste o que você aprendeu com perguntas.</small><button class="secondary" onclick="go('quiz')">Jogar →</button></div>
+  <div class="card"><div class="emoji">✦</div><b>Converse com a EcoIA</b><small>Assistente educativa sobre o tema do projeto.</small><button class="secondary" onclick="go('ia')">Perguntar →</button></div>
+ </div>
+ <div class="content"><span class="tag">IDEIA CENTRAL</span><h3>Progresso também precisa de responsabilidade.</h3><p>O desenvolvimento tecnológico traz benefícios, mas exige energia, matérias-primas e descarte adequado. A Física ajuda a compreender como os dispositivos funcionam e como podemos usar recursos com mais eficiência.</p></div>
+ <div class="grid"><div class="box"><div class="muted">Você vai explorar</div><div class="value">7 áreas</div><small class="muted">Conteúdo, simulações e atividades.</small></div><div class="box"><div class="muted">Missão EcoTech</div><div class="value">1 planeta</div><small class="muted">Inovar cuidando do meio ambiente.</small></div></div>
+</section>
+<section id="fisica" class="panel">
+ <h2 class="section">A Física por trás da tecnologia</h2><p class="intro">Conceitos que explicam o funcionamento dos aparelhos eletrônicos e dos robôs.</p>
+ <div class="content"><h3>⚡ 1. Corrente elétrica</h3><p>É o movimento ordenado de cargas elétricas em um material. Nos fios metálicos, os elétrons são os principais portadores de carga. A corrente é medida em ampères (A).</p><div class="formula">I = Q ÷ Δt</div><p><b>I</b>: corrente elétrica · <b>Q</b>: carga elétrica · <b>Δt</b>: intervalo de tempo.</p></div>
+ <div class="content"><h3>🔋 2. Tensão e resistência</h3><p>A tensão elétrica é a diferença de potencial que pode impulsionar as cargas. A resistência representa a oposição à passagem da corrente. São grandezas importantes para projetar circuitos seguros.</p><div class="formula">U = R × I</div><p>Lei de Ohm: tensão (V) = resistência (Ω) × corrente (A).</p></div>
+ <div class="content"><h3>💡 3. Potência elétrica</h3><p>Potência indica a rapidez com que a energia é transformada ou transferida. Um aparelho de maior potência usa energia mais rapidamente quando ligado pelo mesmo tempo.</p><div class="formula">P = U × I</div><p>Potência é medida em watts (W).</p></div>
+ <div class="content"><h3>🔌 4. Energia elétrica e consumo</h3><p>O consumo depende da potência do aparelho e do tempo de utilização. Nas contas de energia, é comum usar quilowatt-hora (kWh).</p><div class="formula">E = P × t</div><p>Se P estiver em quilowatts e t em horas, E será dado em kWh.</p></div>
+ <div class="content"><h3>🤖 5. Como um robô se movimenta?</h3><p>Uma bateria fornece energia elétrica ao circuito. O controlador processa informações dos sensores e envia sinais aos motores. O motor converte energia elétrica em movimento mecânico.</p><p><b>Energia química da bateria → energia elétrica → energia mecânica + calor.</b></p></div>
+ <details><summary>O que é eficiência energética?</summary><p>É a relação entre a energia útil obtida e a energia fornecida. Um aparelho mais eficiente realiza a mesma tarefa desperdiçando menos energia.</p></details>
+ <details><summary>Por que aparelhos esquentam?</summary><p>Parte da energia elétrica pode ser transformada em energia térmica devido à resistência dos componentes. Esse aquecimento é uma das formas de perda de energia.</p></details>
+</section>
+<section id="lab" class="panel">
+ <h2 class="section">Laboratório virtual</h2><p class="intro">Mude os valores e observe como potência, tempo e consumo estão relacionados.</p>
+ <div class="box">
+  <span class="tag">SIMULADOR DE CONSUMO</span>
+  <label for="device">Escolha um aparelho</label><select id="device"><option value="10">Lâmpada LED — 10 W</option><option value="60">Ventilador — 60 W</option><option value="100">Televisão — 100 W</option><option value="1500">Chuveiro elétrico — 1.500 W</option><option value="65">Notebook — 65 W</option><option value="1200">Micro-ondas — 1.200 W</option></select>
+  <label for="power">Potência: <b id="pval">10 W</b></label><input id="power" type="range" min="5" max="2000" step="5" value="10">
+  <label for="time">Tempo ligado por dia: <b id="tval">5 horas</b></label><input id="time" type="range" min="1" max="24" value="5">
+  <div class="stat"><span>Consumo por dia</span><b id="day" class="value" style="font-size:19px">0,05 kWh</b></div><div class="stat"><span>Consumo em 30 dias</span><b id="month" class="value" style="font-size:19px">1,50 kWh</b></div>
+  <p class="muted">Estimativa: potência (W) × horas ÷ 1.000. O consumo real depende do uso e do funcionamento do aparelho.</p>
+ </div>
+ <div class="content"><span class="tag">DESAFIO DE FÍSICA</span><h3>O que acontece se dobrarmos o tempo?</h3><p>Se a potência permanecer igual e o tempo de uso dobrar, o consumo de energia também dobra. Experimente no simulador!</p></div>
+ <div class="box"><h3>Calculadora da Lei de Ohm</h3><label for="voltage">Tensão (V)</label><input id="voltage" type="number" min="0" value="12"><label for="resistance">Resistência (Ω)</label><input id="resistance" type="number" min="0.01" value="6" step="0.1"><button class="primary wide" id="ohm">Calcular corrente</button><div class="feedback" id="ohmout">Resultado: 2 A</div></div>
+</section>
+<section id="lixo" class="panel">
+ <h2 class="section">O desafio do lixo eletrônico</h2><p class="intro">A tecnologia tem um ciclo de vida: extração, fabricação, uso e descarte.</p>
+ <div class="content"><h3>O que é e-lixo?</h3><p>São equipamentos elétricos e eletrônicos descartados, como celulares, computadores, televisores, baterias, cabos e carregadores. Alguns contêm materiais que podem causar danos ambientais se forem descartados de maneira inadequada.</p></div>
+ <div class="content"><h3>🌎 Um dado importante</h3><div class="value">62 milhões</div><b>de toneladas de lixo eletrônico</b><p>Foram geradas no mundo em 2022, segundo o Global E-waste Monitor 2024. O relatório estimou que apenas 22,3% foram formalmente coletadas e recicladas de maneira adequada.</p><small class="muted">Fonte: UNITAR e ITU, The Global E-waste Monitor 2024.</small></div>
+ <div class="content"><h3>Por que o descarte errado preocupa?</h3><ul><li>Contaminação do solo e da água por substâncias perigosas.</li><li>Desperdício de metais e materiais que poderiam ser recuperados.</li><li>Riscos para trabalhadores e comunidades próximas a locais de descarte irregular.</li><li>Aumento da extração de recursos naturais para fabricar novos produtos.</li></ul></div>
+ <div class="content"><h3>♻️ Qual é o destino correto?</h3><p>Procure pontos de coleta, lojas ou programas de logística reversa que recebam eletrônicos, pilhas e baterias. Não desmonte baterias nem descarte esses itens no lixo comum.</p></div>
+ <div class="box"><h3>Mini jogo: onde descartar?</h3><p id="wasteq">Uma bateria usada deve ir para:</p><div id="wasteopts"></div><div id="wastefeedback" class="muted"></div></div>
+</section>
+<section id="futuro" class="panel">
+ <h2 class="section">Robótica, automação e profissões</h2><p class="intro">As tecnologias mudam tarefas, criam oportunidades e exigem novas competências.</p>
+ <div class="content"><h3>🤖 Robótica x automação</h3><p><b>Robótica</b> é a área que projeta, constrói e programa robôs. <b>Automação</b> usa sistemas para realizar processos com pouca intervenção humana. As duas áreas podem trabalhar juntas.</p></div>
+ <div class="grid">
+  <div class="card"><div class="emoji">🏭</div><b>Indústrias</b><small>Braços robóticos, sensores e linhas automatizadas.</small></div>
+  <div class="card"><div class="emoji">🏥</div><b>Hospitais</b><small>Equipamentos de precisão e sistemas de apoio.</small></div>
+  <div class="card"><div class="emoji">🏠</div><b>Residências</b><small>Assistentes, sensores e aparelhos inteligentes.</small></div>
+ </div>
+ <div class="content"><h3>Atividades que podem ser transformadas</h3><p>Caixas, tarefas repetitivas em fábricas, digitação e algumas rotinas administrativas podem ser automatizadas em parte. Isso não significa que todas essas profissões vão desaparecer por completo.</p></div>
+ <div class="content"><h3>Profissões e áreas em crescimento</h3><ul><li>Engenharia de robótica e mecatrônica.</li><li>Programação e desenvolvimento de sistemas.</li><li>Inteligência artificial e análise de dados.</li><li>Segurança digital.</li><li>Manutenção de robôs e equipamentos.</li><li>Reciclagem tecnológica e engenharia ambiental.</li></ul></div>
+ <div class="content"><h3>Habilidades importantes</h3><p>Raciocínio lógico, criatividade, comunicação, resolução de problemas, pensamento crítico e capacidade de aprender continuamente.</p></div>
+</section>
+<section id="quiz" class="panel">
+ <h2 class="section">Desafio EcoTech</h2><p class="intro">Responda e descubra quanto você aprendeu.</p>
+ <div class="box"><div style="display:flex;justify-content:space-between"><span class="tag" id="qcount">PERGUNTA 1 DE 6</span><b id="score">0 pontos</b></div><div class="progress" style="margin:12px 0"><span id="bar"></span></div><h3 id="question"></h3><div id="answers"></div><div id="qfeedback" aria-live="polite"></div><button class="primary wide" id="check" disabled>Conferir resposta</button><button class="secondary wide" id="next" hidden>Próxima pergunta →</button></div>
+</section>
+<section id="ia" class="panel">
+ <h2 class="section">✦ Converse com a EcoIA</h2><p class="intro">Assistente educativa do projeto EcoTech.</p>
+ <div class="content"><span class="tag">MODO EDUCATIVO OFFLINE</span><h3>Olá! Sou a EcoIA 🌱</h3><p>Posso ajudar a revisar os conceitos do trabalho. Pergunte sobre eletricidade, Lei de Ohm, energia, robótica, lixo eletrônico, reciclagem ou profissões do futuro.</p><p class="muted">Nota: esta versão usa uma base de respostas educativas programadas. Não é uma IA generativa conectada à internet.</p></div>
+ <div class="chat" id="chat" aria-live="polite"><div class="bubble bot">Oi! 👋 O que você gostaria de aprender hoje? Experimente perguntar: “O que é corrente elétrica?”</div></div>
+ <div class="chatrow"><input id="ask" type="text" placeholder="Digite sua pergunta..." autocomplete="off"><button class="primary" id="send">Enviar</button></div>
+ <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:10px"><button class="secondary quick" data-q="O que é a Lei de Ohm?">Lei de Ohm</button><button class="secondary quick" data-q="Como funciona um robô?">Robótica</button><button class="secondary quick" data-q="Como descartar lixo eletrônico?">Descarte</button><button class="secondary quick" data-q="Quais são as profissões do futuro?">Profissões</button></div>
+</section>
+<footer><div style="font-size:30px">🌱</div><b>Inovar também é cuidar do planeta.</b><br><small>ECOTECH • CIÊNCIA PARA UM FUTURO SUSTENTÁVEL</small></footer>
+</main>
+<script>
+function go(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>go(b.dataset.tab));
+const $=id=>document.getElementById(id);
+const power=$('power'),time=$('time'),device=$('device');
+function calc(){let p=+power.value,t=+time.value,d=p*t/1000;$('pval').textContent=p+' W';$('tval').textContent=t+' horas';$('day').textContent=d.toFixed(3).replace('.',',')+' kWh';$('month').textContent=(d*30).toFixed(2).replace('.',',')+' kWh'}
+[power,time].forEach(x=>x.addEventListener('input',calc));device.onchange=()=>{power.value=device.value;calc()};calc();
+$('ohm').onclick=()=>{let u=+$('voltage').value,r=+$('resistance').value;$('ohmout').textContent=r>0&&u>=0?'Corrente elétrica: '+(u/r).toFixed(2).replace('.',',')+' A':'Informe valores válidos.'};
+const waste=[{q:'Uma bateria usada deve ir para:',o:['Lixo comum','Ponto de coleta de pilhas e baterias','Ralo da pia'],a:1,e:'Baterias precisam de coleta específica. Nunca devem ser jogadas no lixo comum.'},{q:'Um celular antigo que ainda funciona pode ser:',o:['Reutilizado ou doado com segurança','Jogado em um rio','Quebrado para brincar'],a:0,e:'Reutilizar prolonga a vida útil do aparelho e reduz resíduos.'},{q:'Um carregador sem uso deve ser:',o:['Queimado','Enterrado','Encaminhado à coleta de eletrônicos'],a:2,e:'A coleta especializada permite destinação e recuperação adequadas dos materiais.'}];let wi=0;
+function renderWaste(){let q=waste[wi];$('wasteq').textContent=q.q;$('wasteopts').innerHTML='';$('wastefeedback').textContent='';q.o.forEach((v,i)=>{let b=document.createElement('button');b.className='secondary';b.style.cssText='width:100%;margin:4px 0;text-align:left';b.textContent=v;b.onclick=()=>{$('wastefeedback').textContent=(i===q.a?'✓ Correto! ':'Resposta correta: '+q.o[q.a]+'. ')+q.e;setTimeout(()=>{wi=(wi+1)%waste.length;renderWaste()},2600)};$('wasteopts').append(b)})}renderWaste();
+const qs=[
+['Qual unidade mede a corrente elétrica?',['Volt','Ampère','Ohm'],1,'A corrente elétrica é medida em ampères (A).'],
+['Qual é a fórmula da Lei de Ohm?',['U = R × I','P = m × g','E = m × c²'],0,'A tensão é igual à resistência multiplicada pela corrente.'],
+['O que acontece com o consumo se o tempo de uso dobra, mantendo a potência?',['Cai pela metade','Não muda','Dobra'],2,'Energia consumida é proporcional ao tempo, se a potência for constante.'],
+['O motor de um robô transforma principalmente energia elétrica em:',['Energia mecânica','Energia química','Energia nuclear'],0,'O motor transforma energia elétrica em movimento mecânico, com perdas como calor.'],
+['Qual atitude reduz o lixo eletrônico?',['Trocar aparelhos sempre','Consertar e reutilizar','Jogar baterias no lixo comum'],1,'Consertar e reutilizar prolonga a vida útil dos equipamentos.'],
+['Qual área trabalha com projeto e construção de robôs?',['Robótica','Astronomia observacional','Botânica'],0,'A robótica reúne conhecimentos de engenharia, eletrônica, programação e controle.']
+];let qi=0,sel=null,pts=0,done=false;
+function renderQuiz(){let q=qs[qi];$('qcount').textContent=`PERGUNTA ${qi+1} DE ${qs.length}`;$('score').textContent=pts+' pontos';$('bar').style.width=(qi/qs.length*100)+'%';$('question').textContent=q[0];$('answers').innerHTML='';$('qfeedback').innerHTML='';$('check').hidden=false;$('check').disabled=true;$('next').hidden=true;sel=null;done=false;q[1].forEach((v,i)=>{let l=document.createElement('label');l.className='option';let r=document.createElement('input');r.type='radio';r.name='q';r.onchange=()=>{$('check').disabled=false;sel=i};l.append(r,document.createTextNode(v));$('answers').append(l)})}
+$('check').onclick=()=>{if(sel===null||done)return;done=true;let q=qs[qi],ok=sel===q[2];if(ok)pts++;$('score').textContent=pts+' pontos';$('qfeedback').className='feedback';$('qfeedback').textContent=(ok?'✓ Muito bem! ':'Resposta correta: '+q[1][q[2]]+'. ')+q[3];$('check').hidden=true;$('next').hidden=false;$('next').textContent=qi===qs.length-1?'Ver resultado':'Próxima pergunta →'};
+$('next').onclick=()=>{if(qi<qs.length-1){qi++;renderQuiz()}else{$('qcount').textContent='RESULTADO FINAL';$('bar').style.width='100%';$('question').textContent=`Você acertou ${pts} de ${qs.length} perguntas!`;$('answers').innerHTML='';$('qfeedback').textContent=pts>=5?'Excelente! Você está preparado para explicar o assunto.':'Continue explorando o aplicativo e tente novamente.';$('next').textContent='Refazer quiz';$('next').onclick=()=>{qi=0;pts=0;renderQuiz()}}};renderQuiz();
+const knowledge=[
+{keys:['lei de ohm','ohm'],a:'A Lei de Ohm relaciona tensão, resistência e corrente elétrica: U = R × I. U é medida em volts (V), R em ohms (Ω) e I em ampères (A). Exemplo: se U = 12 V e R = 6 Ω, então I = 12 ÷ 6 = 2 A.'},
+{keys:['corrente','ampere','ampère'],a:'Corrente elétrica é o movimento ordenado de cargas elétricas. Sua unidade é o ampère (A). Uma forma de calcular é I = Q ÷ Δt, carga elétrica dividida pelo intervalo de tempo.'},
+{keys:['tensao','tensão','volt'],a:'Tensão elétrica é a diferença de potencial elétrico entre dois pontos. Ela é medida em volts (V) e pode impulsionar a movimentação das cargas em um circuito.'},
+{keys:['resistencia','resistência','resistor'],a:'Resistência elétrica é a oposição à passagem da corrente. É medida em ohms (Ω). Resistores são componentes usados para controlar corrente e dividir tensão em circuitos.'},
+{keys:['potencia','potência','watt'],a:'Potência elétrica indica a rapidez com que a energia é transformada ou transferida. Para um circuito simples, P = U × I. A unidade é o watt (W).'},
+{keys:['consumo','kwh','energia'],a:'O consumo elétrico depende da potência e do tempo de uso. Use E = P × t. Para obter kWh, coloque a potência em quilowatts e o tempo em horas. Exemplo: 100 W = 0,1 kW; por 5 horas consome 0,5 kWh.'},
+{keys:['robo','robô','robotica','robótica','motor','sensor'],a:'Um robô combina estrutura mecânica, motores, sensores e um sistema de controle. A bateria fornece energia elétrica; os sensores captam informações e o controlador envia comandos aos motores, que produzem movimento.'},
+{keys:['automacao','automação'],a:'Automação é o uso de sistemas, máquinas e programas para executar processos com pouca intervenção humana. Ela pode aumentar produtividade e precisão, mas também transforma tarefas e profissões.'},
+{keys:['lixo eletronico','lixo eletrônico','e-lixo','eletronico','eletrônico'],a:'Lixo eletrônico é o conjunto de aparelhos elétricos e eletrônicos descartados: celulares, computadores, televisores, cabos e baterias. Alguns componentes contêm substâncias perigosas e precisam de destinação correta.'},
+{keys:['reciclagem','descartar','descarte','bateria','pilha'],a:'Procure pontos de coleta e programas de logística reversa para eletrônicos, pilhas e baterias. Não coloque baterias no lixo comum, não queime aparelhos e não desmonte baterias.'},
+{keys:['62 milhoes','62 milhões','22,3','relatorio','relatório'],a:'O Global E-waste Monitor 2024 informou que o mundo gerou cerca de 62 milhões de toneladas de lixo eletrônico em 2022. Apenas 22,3% foram formalmente coletadas e recicladas de maneira adequada.'},
+{keys:['profissao','profissão','emprego','trabalho','futuro'],a:'Algumas tarefas repetitivas podem ser automatizadas, mas muitas profissões se transformam em vez de desaparecer. Áreas em crescimento incluem robótica, programação, IA, segurança digital, manutenção de equipamentos e reciclagem tecnológica.'},
+{keys:['sustentavel','sustentável','meio ambiente','planeta'],a:'Tecnologia mais sustentável envolve reparar e reutilizar aparelhos, reciclar corretamente, economizar energia, ampliar energias renováveis e desenvolver produtos duráveis e menos poluentes.'},
+{keys:['fisica','física'],a:'A Física explica fenômenos presentes na tecnologia: corrente elétrica, tensão, resistência, potência, energia, magnetismo e movimento. Esses conceitos ajudam a entender circuitos, motores e robôs.'}
+];
+function answerBot(q){let s=q.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');for(let item of knowledge){if(item.keys.some(k=>s.includes(k.normalize('NFD').replace(/[\u0300-\u036f]/g,''))))return item.a}return 'Ainda não encontrei uma resposta específica para essa pergunta na minha base educativa. Tente perguntar sobre corrente elétrica, Lei de Ohm, tensão, resistência, potência, consumo de energia, robótica, lixo eletrônico, reciclagem ou profissões do futuro.'}
+function addBubble(txt,who){let d=document.createElement('div');d.className='bubble '+who;d.textContent=txt;$('chat').append(d);$('chat').scrollTop=$('chat').scrollHeight}
+function send(q){q=q.trim();if(!q)return;addBubble(q,'user');$('ask').value='';setTimeout(()=>addBubble(answerBot(q),'bot'),250)}
+$('send').onclick=()=>send($('ask').value);$('ask').addEventListener('keydown',e=>{if(e.key==='Enter')send($('ask').value)});document.querySelectorAll('.quick').forEach(b=>b.onclick=()=>send(b.dataset.q));
+</script></body></html>
